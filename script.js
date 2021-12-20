@@ -33,7 +33,7 @@ speechBtn.addEventListener("click", () => {
 // Copy Button Functioning
 copyBtn.addEventListener('click', () => {
     navigator.clipboard.writeText(quoteText.innerText);
-    alert('Quote Copied!!')
+    quoteBtn.innerText = 'Quote Copied!!Click To Continue'
 })
 
 twitterBtn.addEventListener("click", () => {
