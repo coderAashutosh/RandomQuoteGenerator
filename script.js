@@ -4,7 +4,8 @@ const quoteText = document.querySelector('.quote'),
     speechBtn = document.querySelector('.sound'),
     copyBtn = document.querySelector('.copy'),
     twitterBtn = document.querySelector('.twitter'),
-    title = document.querySelector('.title')
+    title = document.querySelector('.title'),
+    span = document.querySelector('.copied');
 
 // Random Quote Function
 function randomQuote() {
@@ -20,7 +21,6 @@ function randomQuote() {
     });
 }
 
-
 // For Text to Speech
 speechBtn.addEventListener("click", () => {
     if (!quoteBtn.classList.contains("loading")) {
@@ -33,8 +33,14 @@ speechBtn.addEventListener("click", () => {
 // Copy Button Functioning
 copyBtn.addEventListener('click', () => {
     navigator.clipboard.writeText(quoteText.innerText);
-    quoteBtn.innerText = 'Quote Copied!!Click To Continue'
+    span.innerText = 'Quote Copied!'
+    setTimeout(function () {
+        span.innerText = ''
+    }, 1500)
 })
+
+
+
 
 twitterBtn.addEventListener("click", () => {
     let tweetUrl = `https://twitter.com/compose/tweet?url=${quoteText.innerText}`;
