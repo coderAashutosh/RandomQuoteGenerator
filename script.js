@@ -41,7 +41,7 @@ copyBtn.addEventListener('click', () => {
     Toastify({
         text: "Quote Copied!",
         duration: 2000,
-        destination: "https://aashutosh.vercel.app",
+        destination: "https://aashutosh.vercel.app/",
         newWindow: true,
         // close: true,
         gravity: "top", // `top` or `bottom`
