@@ -102,7 +102,7 @@ box-shadow: 11px -6px 75px 6px rgba(141,141,176,1);
     align-items: center;
     justify-content: center;
     border: 2px solid #5372F0;
-    transition: all 0.9s ease-in-out;
+    transition: all 0.3s ease-in-out;
     position: relative;
 }
 
@@ -154,6 +154,7 @@ background: linear-gradient(327deg, rgba(34,193,195,1) 32%, rgba(42,9,229,1) 54%
     margin: -50px 60px;
     height: 47px;
     width: 77px;
+    font-size: 12px;
     display: flex;
     cursor: pointer;
     color: #5372F0;

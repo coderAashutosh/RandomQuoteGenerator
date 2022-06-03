@@ -33,13 +33,27 @@ speechBtn.addEventListener("click", () => {
 // Copy Button Functioning
 copyBtn.addEventListener('click', () => {
     navigator.clipboard.writeText(quoteText.innerText);
-    span.innerText = 'Quote Copied!'
-    setTimeout(function () {
-        span.innerText = ''
-    }, 1500)
+    // span.innerText = 'Quote Copied!'
+    // setTimeout(function () {
+    //     span.innerText = ''
+    // }, 1500)
+
+    Toastify({
+        text: "Quote Copied!",
+        duration: 2000,
+        destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        // close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+            background: "linear-gradient(327deg, rgba(34,193,195,1) 34%, rgba(76,45,253,1) 100%)",
+            borderRadius: "20px",
+        }
+        // onClick: function(){} // Callback after click
+    }).showToast();
 })
-
-
 
 
 twitterBtn.addEventListener("click", () => {

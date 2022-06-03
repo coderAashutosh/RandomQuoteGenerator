@@ -8,6 +8,7 @@
     <title class="title">RandomQuoteGenerator</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 
 <body>
@@ -29,17 +30,28 @@
         <div class="buttons">
             <div class="features">
                 <ul>
-                    <li class="sound"><i class="fas fa-volume-up"></i></li>
-                    <li class="copy"><i class="fas fa-copy"></i></li>
+                    <li class="sound" data-toggle="Click To Listen" title="Click To Listen"><i
+                            class="fas fa-volume-up"></i>
+                    </li>
+                    <li class="copy" data-toggle="Click To copy" title="Click To Copy">
+                        <i class="fas fa-copy"></i>
+                    </li>
                     <span class="copied"></span>
-                    <li class="twitter"><i class="fab fa-twitter"></i></li>
+                    <li class="twitter" data-toggle="Click To tweet the Quote" title="Click To tweet the Quote"><i
+                            class="fab fa-twitter"></i></li>
                 </ul>
                 <button>New Quote</button>
             </div>
         </div>
     </div>
 
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
     <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 
 </html>
